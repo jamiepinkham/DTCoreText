@@ -8,7 +8,7 @@
 
 #import "DTCoreText.h"
 #import "DTCoreTextLayoutFrame.h"
-#import "DTVersion.h"
+#import <DTFoundation/DTVersion.h>
 
 // global flag that shows debug frames
 static BOOL _DTCoreTextLayoutFramesShouldDrawDebugFrames = NO;

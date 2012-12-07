@@ -1865,9 +1865,10 @@
 					"-all_load",
 					"-ObjC",
 				);
+				PLIST_FILE_OUTPUT_FORMAT = XML;
 				PRODUCT_NAME = DemoApp;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Core/Source\" Core/Externals/**";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -1884,9 +1885,10 @@
 					"-all_load",
 					"-ObjC",
 				);
+				PLIST_FILE_OUTPUT_FORMAT = XML;
 				PRODUCT_NAME = DemoApp;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Core/Source\" Core/Externals/**";
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1958,7 +1960,7 @@
 		A70F11E7148632CD009202BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = (
 					"$(ARCHS_STANDARD_32_BIT)",
 					armv6,
@@ -1976,19 +1978,24 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_THUMB_SUPPORT = NO;
-				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/**",
+					/usr/include/libxml2,
+				);
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)/$(PRODUCT_NAME)";
+				LIBRARY_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)\"/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = DTCoreText;
-				PUBLIC_HEADERS_FOLDER_PATH = ../../DTCoreText;
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Core/Source\" Core/Externals/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)\"";
 			};
 			name = Debug;
 		};
 		A70F11E8148632CD009202BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = (
 					"$(ARCHS_STANDARD_32_BIT)",
 					armv6,
@@ -1999,12 +2006,17 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Core/DTCoreText-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
-				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/**",
+					/usr/include/libxml2,
+				);
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)/$(PRODUCT_NAME)";
+				LIBRARY_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)\"/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = DTCoreText;
-				PUBLIC_HEADERS_FOLDER_PATH = ../../DTCoreText;
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Core/Source\" Core/Externals/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)\"";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

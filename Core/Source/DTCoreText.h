@@ -5,7 +5,7 @@
 #endif
 
 // DTFoundation
-#import "DTFoundation.h"
+#import <DTFoundation/DTFoundation.h>
 
 // global constants
 #import "DTCoreTextConstants.h"
